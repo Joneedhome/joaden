@@ -509,7 +509,7 @@
 </ol>
 <p>&ensp;&ensp;&ensp;&ensp;这些算法中的许多都可以实时处理，这意味着它们可以从产线上的摄像机分析高分辨率的视频流。你甚至可以使用英伟达的Jetson Nano实时分析来自物联网设备的声音或数据。开发人员工具包的这些功能可以一起或单独用于构建复杂的人工智能系统，此外，还可以用于许多业务和工业应用程序。</p>
 <h3 id="一、英伟达-NANO板卡配置参数"><a href="#一、英伟达-NANO板卡配置参数" class="headerlink" title="一、英伟达 NANO板卡配置参数"></a>一、英伟达 NANO板卡配置参数</h3><p>&ensp;&ensp;&ensp;&ensp;开发板上丰富的外围接口，使得开发人员可以轻松连接不同的传感器，以支持各种人工智能应用程序及AI项目的快速搭建。</p>
-
+<img src="/joaden/2020/09/15/1-0-learn-nano/nano.jpg" class title="nano">
 <p><img src="/joaden/joaden/2020/09/15/1-0-learn-nano/asset_img" alt="NanoCard"></p>
 <ol>
 <li>GPU：NVIDIA MaxwellTM架构，配备128个NVIDIA CUDA核心</li>
@@ -526,9 +526,9 @@
 <li>尺寸：100 mm x 80 mm x 29 mm </li>
 </ol>
 <h3 id="二、NANO板卡运行"><a href="#二、NANO板卡运行" class="headerlink" title="二、NANO板卡运行"></a>二、NANO板卡运行</h3><p>nano板卡入门指南： <a target="_blank" rel="noopener" href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#intro">https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#intro</a><br>&ensp;&ensp;&ensp;&ensp;根据官方提供的SD卡格式化软件和烧录软件，进行格式化和烧录。</p>
-<h5 id="2-1格式化用到SD-Card-Formatter-exe"><a href="#2-1格式化用到SD-Card-Formatter-exe" class="headerlink" title="2.1格式化用到SD Card Formatter.exe"></a>2.1格式化用到SD Card Formatter.exe</h5>
+<h5 id="2-1格式化用到SD-Card-Formatter-exe"><a href="#2-1格式化用到SD-Card-Formatter-exe" class="headerlink" title="2.1格式化用到SD Card Formatter.exe"></a>2.1格式化用到SD Card Formatter.exe</h5><img src="/joaden/2020/09/15/1-0-learn-nano/SD_Card_Formatter.png" class title="sdcard">
 <p><img src="/joaden/joaden/2020/09/15/1-0-learn-nano/asset_img" alt="SDCardFormatter"></p>
-<h5 id="2-2烧录镜像用到etcher-exe"><a href="#2-2烧录镜像用到etcher-exe" class="headerlink" title="2.2烧录镜像用到etcher.exe"></a>2.2烧录镜像用到etcher.exe</h5>
+<h5 id="2-2烧录镜像用到etcher-exe"><a href="#2-2烧录镜像用到etcher-exe" class="headerlink" title="2.2烧录镜像用到etcher.exe"></a>2.2烧录镜像用到etcher.exe</h5><img src="/joaden/2020/09/15/1-0-learn-nano/SD_Card_Formatter.png" class title="etcher">
 <p><img src="/joaden/joaden/2020/09/15/1-0-learn-nano/asset_img" alt="etcher"></p>
 <h3 id="三、NANO-更新系统"><a href="#三、NANO-更新系统" class="headerlink" title="三、NANO 更新系统"></a>三、NANO 更新系统</h3><p>源替换，加速更新，先拷贝一份，备份，删除所有的原有源，替换成下方的新源</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak    #为防止误操作后无法恢复，先备份原文件sources.list</span><br><span class="line">sudo gedit &#x2F;etc&#x2F;apt&#x2F;sources.list  </span><br></pre></td></tr></table></figure>
