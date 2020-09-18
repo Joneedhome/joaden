@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Joaden.lee</title>
+  
+  <subtitle>This Is My Moving On,But Not Only.</subtitle>
+  <link href="https://joadenlee.gitee.io/joaden/atom.xml" rel="self"/>
+  
+  <link href="https://joadenlee.gitee.io/joaden/"/>
+  <updated>2020-09-17T08:19:11.928Z</updated>
+  <id>https://joadenlee.gitee.io/joaden/</id>
+  
+  <author>
+    <name>joaden lee</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>maden_file</title>
+    <link href="https://joadenlee.gitee.io/joaden/2020/09/17/maden-file/"/>
+    <id>https://joadenlee.gitee.io/joaden/2020/09/17/maden-file/</id>
+    <published>2020-09-17T08:18:24.000Z</published>
+    <updated>2020-09-17T08:19:11.928Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;“香雾云鬟湿，清辉玉臂寒。”这是描绘妻子的美丽，“香雾”、“云鬟”、“玉臂”，用了这样的词语来形容，这是真爱无疑了！&lt;br&gt;“昼引老妻乘小艇，晴看稚子浴清江。”竟然和妻子划着小船，悠哉悠哉的看风景，而不管孩子们在河里玩，这太让人羡慕了。&lt;/p&gt;
+&lt;p&gt;“老妻书数纸，应悉未归</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sencend</title>
+    <link href="https://joadenlee.gitee.io/joaden/2020/09/16/sencend/"/>
+    <id>https://joadenlee.gitee.io/joaden/2020/09/16/sencend/</id>
+    <published>2020-09-16T12:01:35.000Z</published>
+    <updated>2020-09-16T12:01:35.293Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mynew</title>
+    <link href="https://joadenlee.gitee.io/joaden/2020/09/16/mynew/"/>
+    <id>https://joadenlee.gitee.io/joaden/2020/09/16/mynew/</id>
+    <published>2020-09-16T11:59:01.000Z</published>
+    <updated>2020-09-16T11:59:01.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>初始英伟达开发板 jetson-nano</title>
+    <link href="https://joadenlee.gitee.io/joaden/2020/09/15/1-0-learn-nano/"/>
+    <id>https://joadenlee.gitee.io/joaden/2020/09/15/1-0-learn-nano/</id>
+    <published>2020-09-15T09:27:54.000Z</published>
+    <updated>2020-09-16T08:27:20.480Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一章-初识NANO板卡&quot;&gt;&lt;a href=&quot;#第一章-初识NANO板卡&quot; class=&quot;headerlink&quot; title=&quot;第一章 初识NANO板卡&quot;&gt;&lt;/a&gt;第一章 初识NANO板卡&lt;/h1&gt;&lt;p&gt;    NVIDIA 最新推出的Jetson Nano</summary>
+        
+      
+    
+    
+    
+    <category term="jetson-nano" scheme="https://joadenlee.gitee.io/joaden/categories/jetson-nano/"/>
+    
+    
+    <category term="jetson-nano" scheme="https://joadenlee.gitee.io/joaden/tags/jetson-nano/"/>
+    
+  </entry>
+  
+</feed>

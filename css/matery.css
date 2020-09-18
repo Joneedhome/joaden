@@ -33,12 +33,29 @@
     }
 }
 
+/*背景图片*/
 body {
-    background-color: #eaeaea;
+    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0px 0px;
+    background-attachment: fixed;
     margin: 0;
-    color: #34495e;
-    overflow-x: hidden;
-    overflow-y: auto;
+    color: #7F95D1;
+}
+
+
+
+/* 滑动条*/
+::-webkit-scrollbar-thumb {
+    background-color: #FF2A68;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 3em;
+}
+::-webkit-scrollbar-track {
+    background-color: #fcacaf;
+    border-radius: 3em;
+}
+::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
 }
 
 h1 {
@@ -267,10 +284,14 @@ mark {
     margin-bottom: 0;
 }
 
+/*更改导航栏颜色*/
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #4cbf30 20%, #cc99ff 80%); /*修改成自己喜欢的颜色值*/
+    opacity: 0.8;  /*透明效果 值范围 0~1，看情况自己修改*/
 }
 
+
+/*A0EEE1    0f9d58 字体颜色*/
 .text-color {
     color: #0f9d58 !important;
 }
@@ -577,11 +598,11 @@ header .go-back i {
 .post-cover {
     height: 40vh !important;
 }
-
-.bg-cover:after {
+/*取消蒙版特效
+.bg-cover:after { 
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+}*/
 
 .bg-cover:before,
 .bg-cover:after {
@@ -623,7 +644,7 @@ header .go-back i {
 
 @-webkit-keyframes rainbow {
 
-    0%,
+    /*0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
         background: linear-gradient(45deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
@@ -664,12 +685,12 @@ header .go-back i {
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-    }
+    }*/
 }
 
 @keyframes rainbow {
 
-    0%,
+    /*0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
         background: linear-gradient(45deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
@@ -710,7 +731,7 @@ header .go-back i {
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-    }
+    }*/
 }
 
 .index-card {
@@ -1725,13 +1746,14 @@ thead {
     padding: 1rem 0 1rem;
 }
 
+/*bai se fff*/
 .my-projects .info .icon {
     display: inline-block;
     width: 76px;
     height: 76px;
     text-align: center;
     line-height: 76px;
-    color: #fff;
+    color: #00868B;
     font-size: 1.75rem;
     border-radius: 50%;
 }
@@ -1841,7 +1863,7 @@ thead {
 
 .my-gallery {
     margin: 4.5rem auto 1rem;
-    padding: 0 1.2rem;
+    padding: 0 12rem;/*1.2*/
     max-width: 1100px;
 }
 
@@ -1850,10 +1872,22 @@ thead {
 }
 
 .my-gallery .photo img {
-    width: 100%;
+    /*width: 100%;*/
     height: 200px;
     border-radius: 10px;
     cursor: pointer;
+    /*==================*/
+
+  &.first-child  /*以下部分能使图片居中显示*/
+    display: block;
+  &.loaded
+    position: absolute;
+    display: block;
+  img
+    display: block;
+    max-width: 100%;
+    margin: 0 auto ;
+
 }
 
 /*尾部样式*/
