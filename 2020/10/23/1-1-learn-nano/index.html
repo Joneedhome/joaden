@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mynew, gongchenghui,github,gitee">
-    <meta name="description" content="千山鸟飞绝，万径人踪灭。孤舟蓑笠翁，独钓寒江雪。">
+    <meta name="keywords" content="第二章 NANO开发环境配置, gongchenghui,github,gitee">
+    <meta name="description" content="有形的东西迟早会凋零，但只有回忆是永远不会凋零的。。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mynew | Joaden.lee</title>
+    <title>第二章 NANO开发环境配置 | Joaden.lee</title>
     <link rel="icon" type="image/png" href="/joaden/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/joaden/libs/awesome/css/all.css">
@@ -167,7 +167,7 @@
         <div class="logo-name">Joaden.lee</div>
         <div class="logo-desc">
             
-            千山鸟飞绝，万径人踪灭。孤舟蓑笠翁，独钓寒江雪。
+            有形的东西迟早会凋零，但只有回忆是永远不会凋零的。。
             
         </div>
     </div>
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/joaden/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/joaden/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mynew</h1>
+                    <h1 class="description center-align post-title">第二章 NANO开发环境配置</h1>
                 </div>
             </div>
         </div>
@@ -414,12 +414,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/joaden/tags/jetson-nano/">
+                                <span class="chip bg-color">jetson-nano</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/joaden/categories/jetson-nano/" class="post-category">
+                                jetson-nano
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -428,28 +441,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-16
+                    2020-10-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-16
+                    2020-10-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -464,7 +477,180 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="第二章-NANO板卡搭建开发环境"><a href="#第二章-NANO板卡搭建开发环境" class="headerlink" title="第二章 NANO板卡搭建开发环境"></a>第二章 NANO板卡搭建开发环境</h1><p>    NVIDIA资料：  <a target="_blank" rel="noopener" href="http://ngc.nvidia.com/">http://ngc.nvidia.com/</a></p>
+<h3 id="一、NANO-更新系统"><a href="#一、NANO-更新系统" class="headerlink" title="一、NANO 更新系统"></a>一、NANO 更新系统</h3><p>源替换，加速更新，先拷贝一份，备份，删除所有的原有源，替换成下方的新源</p>
+<pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak    #为防止误操作后无法恢复，先备份原文件sources.list
+sudo gedit /etc/apt/sources.list  </code></pre>
+<p>好用的源，下载速度是原有的百倍。</p>
+<pre><code>deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main multiverse restricted universe</code></pre>
+<p>更新系统~(根据需要更新，如果因为自身项目的版本限制，最好不要轻易升级)</p>
+<pre><code>sudo apt-get update
+sudo apt-get full-upgrade</code></pre>
+<h3 id="四、NANO-安装软件和配置"><a href="#四、NANO-安装软件和配置" class="headerlink" title="四、NANO 安装软件和配置"></a>四、NANO 安装软件和配置</h3><p>    Jetson-nano的OS镜像已经自带了JetPack，cuda，cudnn，opencv等都已经安装好，并有例子，这些例子安装路径如下所示</p>
+<table>
+<thead>
+<tr>
+<th>库名称</th>
+<th align="center">版本</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TensorRT</td>
+<td align="center">根据自身情况</td>
+<td align="left">/usr/src/tensorrt/samples/</td>
+</tr>
+<tr>
+<td>CUDA</td>
+<td align="center">根据自身情况</td>
+<td align="left">/usr/local/cuda-/samples/</td>
+</tr>
+<tr>
+<td>cuDNN</td>
+<td align="center">根据自身情况</td>
+<td align="left">/usr/src/cudnn_samples_v7/</td>
+</tr>
+<tr>
+<td>Multimedia API</td>
+<td align="center">根据自身情况</td>
+<td align="left">/usr/src/tegra_multimedia_api/</td>
+</tr>
+<tr>
+<td>VisionWorks</td>
+<td align="center">根据自身情况</td>
+<td align="left">/usr/share/visionworks/sources/samples/ /usr/share/visionworks-tracking/sources/samples/ /usr/share/visionworks-sfm/sources/samples/</td>
+</tr>
+<tr>
+<td>OpenCV</td>
+<td align="center">根据自身情况</td>
+<td align="left">/usr/share/OpenCV/samples/</td>
+</tr>
+</tbody></table>
+<p>（1） 检查CUDA</p>
+<p>Jetson-nano中已经安装了CUDA10.0版本，但是此时你如果运行 nvcc -V是不会成功的，需要你把CUDA的路径写入环境变量中。OS中自带Vim工具 ，所以运行下面的命令编辑环境变量 <code>sudo vim  ~/.bashrc</code><br>在最后添加： 注意自己的版本信息进行调整修改参数</p>
+<pre><code>export CUDA_HOME=/usr/local/cuda-10.0.xxxxxxx
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0.xxxxxxxx/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda-10.0.xxxxx/bin:$PATH</code></pre>
+<p>执行命令<code>source ~/.bashrc</code><br>用命令检查结果 <code>nvcc -V</code></p>
+<p>（2）检查OpenCV<br>Jetson-nano中已经安装了OpenCV3.3版本，可以使用命令检查OpenCV是否安装就绪，如果OpenCv安装就绪，会显示版本号</p>
+<pre><code>pkg-config opencv --modversion</code></pre>
+<p>（3）检查cuDNN<br>Jetson-nano中已经安装好了cuDNN，并有例子可供运行，我们运行一下例子，也正好验证上面的CUDA</p>
+<pre><code>cd /usr/src/cudnn_samples_v7/mnistCUDNN  
+sudo make     
+sudo chmod a+x mnistCUDNN # 
+./mnistCUDNN</code></pre>
+<p>成功则如下显示：</p>
+<pre><code>beckhans@Jetson:/usr/src/cudnn_samples_v7/mnistCUDNN$ ./mnistCUDNN
+》》》
+Test passed!</code></pre>
+<h3 id="二、安装python-pip3-jetson-stats-lt-jtop命令-gt"><a href="#二、安装python-pip3-jetson-stats-lt-jtop命令-gt" class="headerlink" title="二、安装python pip3 jetson-stats<jtop命令>"></a>二、安装python pip3 jetson-stats&lt;jtop命令&gt;</h3><ol>
+<li>python pip3<pre><code>sudo apt-get install python3-pip python3-dev
+#安装pip
+python -m pip install -U --force-reinstall pip
+#升级pip至20.1.1</code></pre>
+</li>
+<li>JetSon系列是Nvidia公司推出的面向边缘计算嵌入式平台。<br>在使用nvidia-smi时发现是用不了，搜索之下发现使用jtop代替了<br>补充一下安装jtop的记录<pre><code>pip3 install jetson-stats</code></pre>
+</li>
+</ol>
+<h3 id="三、-安装TensorFlow"><a href="#三、-安装TensorFlow" class="headerlink" title="三、 安装TensorFlow"></a>三、 安装TensorFlow</h3><ol>
+<li>TensorFlow1.13.1的安装</li>
+</ol>
+<p>    C/C++部署有最高运行效率，但开发困难，一般的做法：python做模型的开发调试，最终部署用C/C++部署模型。Nvidia官方给了Tensorflow在Jetson设备上的安装指南，甚至还提供了一个Nvidia编译版本的Tensorflow可以直接安装.</p>
+<ol start="2">
+<li><p>安装相关的依赖库和工具,系统里面默认是没有python3-pip的，所以需要自己安装。</p>
+<pre><code>sudo apt-get install libhdf5-serial-dev hdf5-tools zlib1g-dev zip libjpeg8-dev libhdf5-dev  python3-pip </code></pre>
+</li>
+<li><p>pip的配置:默认pip是直接从pypi服务器下载这些库的，但是pypi也是在海外的，所以为了下载更快，这里进行一些简单的配置，使用国内pip源，这里使用的是ali的pip源，配置文件如下：</p>
+<pre><code>[global]
+trusted-host = mirrors.aliyun.com
+index-url = http://mirrors.aliyun.com/pypi/simple</code></pre>
+</li>
+<li><p>修改配置文件</p>
+<pre><code>cd ~
+mkdir .pip
+nano .pip/pip.conf   # 将上述配置内容写入配置文件即可</code></pre>
+</li>
+<li><p>安装相关的python库,安装过程可能会出现一些错误，如网络错误等，所以需要仔细看一下最终安装的结果，确认安装确实完成了。</p>
+<pre><code>pip3 install -U numpy  # 需要编译安装，用时很长，所以单独安装
+pip3 install -U h5py # 需要编译安装，用时非常长，我的板子装这个20多分钟才装完
+pip3 install -U grpcio absl-py py-cpuinfo psutil portpicker grpcio six mock requests gast h5py astor termcolor</code></pre>
+</li>
+</ol>
+<ol start="6">
+<li>安装TensorFlow<pre><code>pip3 install --pre --extra-index-url \
+https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu</code></pre>
+</li>
+</ol>
+<p>这么安装是直接从网站上下载wheel文件的，也可以用下载工具先去下载好，再用pip执行本地安装。（推荐）<br><a target="_blank" rel="noopener" href="https://developer.download.nvidia.com/compute/redist/jp/v44">https://developer.download.nvidia.com/compute/redist/jp/v44</a><br>这个过程同样很漫长，而且还要装一些额外的东西。</p>
+<pre><code>sudo pip install --ignore-installed --upgrade tensorflow_gpu-1.3.0-cp36-cp36m-linux_x86_64.whl
+#tensorflow-1.15.2+nv20.4-cp36-cp36m-linux_aarch64.whl</code></pre>
+<p>查看命令</p>
+<pre><code>python ==&gt; import tensorflow ==&gt; tensorflow.__version__</code></pre>
+<h3 id="四、opencv4-4安装与问题汇总"><a href="#四、opencv4-4安装与问题汇总" class="headerlink" title="四、opencv4.4安装与问题汇总"></a>四、opencv4.4安装与问题汇总</h3><pre><code>sudo apt-get install cmake #如果已经安装过cmake，则该步骤省略
+sudo apt-get install build-essential libgtk2.0-dev libgtk-3-dev libavcodec-dev libavformat-dev libjpeg-dev libswscale-dev libtiff5-dev
+
+# python3支持
+sudo apt install python3-dev python3-numpy
+# streamer支持
+sudo apt install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
+# 可选的依赖
+sudo apt install libpng-dev libopenexr-dev libtiff-dev libwebp-dev
+
+unzip opencv-4.0.0.zip -d .
+cd opencv-4.0.0/
+mkdir build
+cd build/
+cmake -D CMAKE_BUILD_TYPE=Release -D OPENCV_GENERATE_PKGCONFIG=YES \
+-D CMAKE_INSTALL_PREFIX=/usr/local/opencv4 ..
+# runs 4 jobs in parallel（nano四核）
+make -j4
+sudo make install
+
+sudo find / -iname opencv4.pc
+[sudo] password for ywq:
+/usr/local/opencv4/lib/pkgconfig/opencv4.pc
+find: ‘/run/user/1000/gvfs’: Permission denied
+/home/ywq/Downloads/OpenCV/opencv-4.0.0/build/unix-install/opencv4.pc
+
+sudo vim /etc/profile.d/pkgconfig.sh
+export PKG_CONFIG_PATH=/usr/local/opencv4/lib/pkgconfig:$PKG_CONFIG_PATH
+source /etc/profile</code></pre>
+<p>检查：</p>
+<pre><code>pkg-config --libs opencv4 </code></pre>
+<p>结果：<br>-L/usr/local/opencv4/lib -lopencv_ml -lopencv_dnn -lopencv_video <br>-lopencv_stitching -lopencv_objdetect -lopencv_calib3d -lopencv_features2d <br>-lopencv_highgui -lopencv_videoio -lopencv_imgcodecs <br>-lopencv_flann -lopencv_photo -lopencv_gapi -lopencv_imgproc -lopencv_core</p>
+<pre><code>sudo vim /etc/ld.so.conf.d/opencv4.conf
+    /usr/local/opencv4/lib
+sudo ldconfig</code></pre>
+<h3 id="六、问题汇总"><a href="#六、问题汇总" class="headerlink" title="六、问题汇总"></a>六、问题汇总</h3><ol>
+<li>cmake 编译opencv4参数解析：<br>```</li>
+</ol>
+<p>-D CMAKE_BUILD_TYPE=Release<br>-D CMAKE_INSTALL_PREFIX=/usr/local </p>
+<h1 id="如果要安装opencv-contrib模块，需要指定对应的modules文件夹位置"><a href="#如果要安装opencv-contrib模块，需要指定对应的modules文件夹位置" class="headerlink" title="如果要安装opencv_contrib模块，需要指定对应的modules文件夹位置"></a>如果要安装opencv_contrib模块，需要指定对应的modules文件夹位置</h1><p>-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules</p>
+<h1 id="基本用不到python2，因此这里只编译python3的opencv版本"><a href="#基本用不到python2，因此这里只编译python3的opencv版本" class="headerlink" title="基本用不到python2，因此这里只编译python3的opencv版本"></a>基本用不到python2，因此这里只编译python3的opencv版本</h1><p>-D PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3<br>-D BUILD_opencv_python3=ON<br>-D BUILD_opencv_python2=OFF<br>-D PYTHON3_EXCUTABLE=/usr/bin/python3<br>-D PYTHON3_INCLUDE_DIR=</p>
+<h1 id="不需要使用opencv的GPU加速，将CUDA选项关掉"><a href="#不需要使用opencv的GPU加速，将CUDA选项关掉" class="headerlink" title="不需要使用opencv的GPU加速，将CUDA选项关掉"></a>不需要使用opencv的GPU加速，将CUDA选项关掉</h1><p>-D WITH_CUDA=OFF<br>#这个选项非常重要，会生成一个被pkg-config模块使用的opencv4.pc文件，编译opencv的c++项目时可能会用到<br>-D OPENCV_GENERATE_PKGCONFIG=ON </p>
+<pre><code>
+### 七、vscode 安装
+wget --content-disposition  \
+https://packagecloud.io/headmelted/codebuilds/packages/debian/stretch/code-oss_1.32.0-1550644676_arm64.deb/download.deb
+
+
+### 八、google pinyin
+sudo apt-get install fcitx fcitx-googlepinyin fcitx-module-cloudpinyin fcitx-sunpinyin -y
+sudo apt-get install fcitx fcitx-googlepinyin -y
+sudo apt-get -f install
+
+### 九、先安装libhdf5-dev、python-h5py，之后再安装keras
+
+
+</code></pre>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -482,7 +668,7 @@
             });
             document.body.appendChild(img);
           });
-      </script>
+      </script><link rel="stylesheet" href="/joaden/css/spoiler.css" type="text/css"><script src="/joaden/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -507,7 +693,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://joadenlee.gitee.io/joaden/joaden/2020/09/16/mynew/">https://joadenlee.gitee.io/joaden/joaden/2020/09/16/mynew/</a>
+                    <a href="https://joadenlee.gitee.io/joaden/joaden/2020/10/23/1-1-learn-nano/">https://joadenlee.gitee.io/joaden/joaden/2020/10/23/1-1-learn-nano/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -544,7 +730,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/joaden/tags/jetson-nano/">
+                                    <span class="chip bg-color">jetson-nano</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -714,35 +904,44 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/joaden/2020/09/16/sencend/">
+                <a href="/joaden/2020/10/23/1-2-learn-nano/">
                     <div class="card-image">
                         
                         
-                        <img src="/joaden/medias/featureimages/4.jpg" class="responsive-img" alt="sencend">
+                        <img src="/joaden/medias/featureimages/0.jpg" class="responsive-img" alt="第三章 NANO板卡运行容器整理">
                         
-                        <span class="card-title">sencend</span>
+                        <span class="card-title">第三章 NANO板卡运行容器整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            第三章 NANO板卡容器下载和运行学习教程： https://developer.nvidia.com/embedded/learn/tutorialsNVIDIA资料：  http://ngc.nvidia.com/Nvidia jetp
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-16
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            joaden lee
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/joaden/categories/jetson-nano/" class="post-category">
+                                    jetson-nano
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/joaden/tags/jetson-nano/">
+                        <span class="chip bg-color">jetson-nano</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -758,15 +957,16 @@
                     <div class="card-image">
                         
                         
-                        <img src="/joaden/medias/featureimages/4.jpg" class="responsive-img" alt="初始英伟达开发板 jetson-nano">
+                        <img src="/joaden/medias/featureimages/16.jpg" class="responsive-img" alt="第一章 初始英伟达开发板 jetson-nano">
                         
-                        <span class="card-title">初始英伟达开发板 jetson-nano</span>
+                        <span class="card-title">第一章 初始英伟达开发板 jetson-nano</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一章 初识NANO板卡    NVIDIA 最新推出的Jetson Nano DeveloperKit能满足你对AI的所有想象，跟着它走进AI世界，享受AI带来的无限乐趣。无论你是专业人员、研究人员还是爱好者和学生，Jetson Nano
+                            第一章 初识NANO板卡    NVIDIA 最新推出的Jetson Nano DeveloperJetson Nano开发套件是一款功能强大的小型人工智能计算机，插microSD卡即可，可运行多个神经网络，算法计算。
+一、 英伟达Jets
                         
                     </div>
                     <div class="publish-info">
@@ -996,7 +1196,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.9k</span>&nbsp;字
+                class="white-color">6.1k</span>&nbsp;字
             
             
             
@@ -1134,6 +1334,6 @@ $(function () {
     <script src="/joaden/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/joaden/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+<script src="/joaden/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

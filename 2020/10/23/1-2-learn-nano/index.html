@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="sencend, gongchenghui,github,gitee">
-    <meta name="description" content="千山鸟飞绝，万径人踪灭。孤舟蓑笠翁，独钓寒江雪。">
+    <meta name="keywords" content="第三章 NANO板卡运行容器整理, gongchenghui,github,gitee">
+    <meta name="description" content="有形的东西迟早会凋零，但只有回忆是永远不会凋零的。。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>sencend | Joaden.lee</title>
+    <title>第三章 NANO板卡运行容器整理 | Joaden.lee</title>
     <link rel="icon" type="image/png" href="/joaden/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/joaden/libs/awesome/css/all.css">
@@ -167,7 +167,7 @@
         <div class="logo-name">Joaden.lee</div>
         <div class="logo-desc">
             
-            千山鸟飞绝，万径人踪灭。孤舟蓑笠翁，独钓寒江雪。
+            有形的东西迟早会凋零，但只有回忆是永远不会凋零的。。
             
         </div>
     </div>
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/joaden/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/joaden/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">sencend</h1>
+                    <h1 class="description center-align post-title">第三章 NANO板卡运行容器整理</h1>
                 </div>
             </div>
         </div>
@@ -414,12 +414,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/joaden/tags/jetson-nano/">
+                                <span class="chip bg-color">jetson-nano</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/joaden/categories/jetson-nano/" class="post-category">
+                                jetson-nano
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -428,28 +441,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-16
+                    2020-10-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-16
+                    2020-10-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -464,7 +477,114 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="第三章-NANO板卡容器下载和运行"><a href="#第三章-NANO板卡容器下载和运行" class="headerlink" title="第三章 NANO板卡容器下载和运行"></a>第三章 NANO板卡容器下载和运行</h1><p>学习教程： <a target="_blank" rel="noopener" href="https://developer.nvidia.com/embedded/learn/tutorials">https://developer.nvidia.com/embedded/learn/tutorials</a><br>NVIDIA资料：  <a target="_blank" rel="noopener" href="http://ngc.nvidia.com/">http://ngc.nvidia.com/</a><br>Nvidia jetpack ： <a target="_blank" rel="noopener" href="https://developer.nvidia.com/embedded/jetpack-archive">https://developer.nvidia.com/embedded/jetpack-archive</a><br>容器-人体姿态检测： <a target="_blank" rel="noopener" href="https://ngc.nvidia.com/catalog/containers/nvidia:jetson-pose">https://ngc.nvidia.com/catalog/containers/nvidia:jetson-pose</a><br>硬件资料文档： <a target="_blank" rel="noopener" href="https://docs.nvidia.com/jetson/l4t/index.html">https://docs.nvidia.com/jetson/l4t/index.html</a>   </p>
+<h3 id="一、Docker容器显示图形到宿主机屏幕"><a href="#一、Docker容器显示图形到宿主机屏幕" class="headerlink" title="一、Docker容器显示图形到宿主机屏幕"></a>一、Docker容器显示图形到宿主机屏幕</h3><p> Docker本身的工作模式是命令行的，但是如果运行在docker中的应用需要显示图形界面如何能实现呢？<br>可以通过在宿主机安装xserver，将docker容器视为客户端，通过网络或挂载的方式就可以实现将需要显示的图像显示在宿主机显示器。<br>1.网络方式（此方式也可以用于两主机间）</p>
+<pre><code>A.在宿主机
+查看宿主机IP
+$ ifconfig                          ##假设为xxx.xxx.xxx.xx
+查看当前显示的环境变量值
+$ echo $DISPLAY   (要在显示屏查看，其他ssh终端不行)  ##假设为:0
+或通过socket文件分析：
+$ ll /tmp/.X11-unix/                            ##假设为X0= ---&gt; :0
+
+安装xserver
+$ sudo apt install x11-xserver-utils
+$ sudo vim /etc/lightdm/lightdm.conf 
+增加许可网络连接
+[SeatDefaults]
+xserver-allow-tcp=true
+重启xserver
+$ sudo systemctl restart lightdm
+许可所有用户都可访问xserver
+xhost +
+
+B.在docker 容器内
+# export DISPLAY=xxx.xxx.xxx.xx:0
+注意：环境变量设置需要每次进docker设置，可以写在：/etc/bash.bashrc 文件中，避免每次进终端时设置
+</code></pre>
+<p>2.挂载方式<br>挂载方式是在使用image创建docker容器时，通过-v参数设置docker内外路径挂载，使显示xserver设备的socket文件在docker内也可以访问。并通过-e参数设置docker内的DISPLAY参数和宿主机一致。</p>
+<pre><code>A.在宿主机
+查看宿主机IP
+$ ifconfig                          ##假设为xxx.xxx.xxx.xx
+查看当前显示的环境变量值
+$ echo $DISPLAY   (要在显示屏查看，其他ssh终端不行)  ##假设为:0
+或通过socket文件分析：
+$ ll /tmp/.X11-unix/                            ##假设为X0= ---&gt; :0
+
+安装xserver
+$ sudo apt install x11-xserver-utils
+许可所有用户都可访问xserver
+xhost +
+
+
+B.在docker 容器创建时
+-v /tmp/.X11-unix:/tmp/.X11-unix
+-e DISPLAY=:0
+
+例如：
+docker run -itd --name 容器名 -h 容器主机名 --privileged \
+           -v /tmp/.X11-unix:/tmp/.X11-unix  \
+           -e DISPLAY=:0 镜像名或id /bin/bash
+</code></pre>
+<p>3.验证：<br>使用带有界面功能的时钟软件尝试  </p>
+<pre><code>在docker容器中：
+$ sudo apt-get install xarclock
+$ xarclock</code></pre>
+<p>应该可以看到xserver端显示器显示时钟界面。</p>
+<h3 id="二、制作运行容器"><a href="#二、制作运行容器" class="headerlink" title="二、制作运行容器"></a>二、制作运行容器</h3><p> 创建容器名字，端口映射，目录映射，镜像指定  </p>
+<ol>
+<li>拉取容器镜像<h1 id="pull-images"><a href="#pull-images" class="headerlink" title="pull images"></a>pull images</h1><code>sudo docker pull XX.com/nvidia-ngc/deepstream-l4t@sha256:XX</code></li>
+<li>制作容器<br>```<br>sudo docker run –name XX_NAME -idt \</li>
+</ol>
+<p>–gpus all <br>–network host <br>-e DISPLAY=$DISPLAY <br>-v /tmp/.X11-unix/:/tmp/.X11-unix <br>-v /home/NAME_XX:/root/workspace/NAME_XX <br>-p 8500-9000:8500-9000 -p 6500-7000:6500-7000 <br>-w /root XX.com/nvidia-ngc/deepstream-l4t@sha256:XX</p>
+<pre><code>3. 运行容器</code></pre>
+<h1 id="enter-docker"><a href="#enter-docker" class="headerlink" title="enter docker"></a>enter docker</h1><p>sudo docker start XX_NAME<br>sudo docker exec -it XX_NAME  /bin/bash</p>
+<pre><code>4. 停止容器和删除
+`sudo docker stop XX_NAME`
+`sudo docker rm XX_NAME`
+5. 查看和删除镜像
+查看所有的镜像`docker images` 
+5. 查看容器
+产看所有的容器`docker ps -a`
+6. 利用容器生成镜像：
+`docker commit -m "test" -a "test" 6ab59ef4813b ubuntu_test  `
+7. 为镜像导入包：
+`root@test:~# cat mysql-5.7.26.tar.gz | docker import - ubuntu_test`
+
+8. 导出镜像到本地：
+`root@test:~# docker save -o ubuntu_test.tar ubuntu_test`
+
+9. 导入镜像：
+`root@test:~# docker load &lt; ubuntu_test.tar`
+
+10. 移除镜像：
+`root@test:~# docker rmi df0bad08f9de---------ID、镜像名称`
+注：在删除镜像之前要先用 docker rm 删掉依赖于这个镜像的所有容器。
+
+11. 导出容器：
+`root@test:~# docker export 6ab59ef4813b &gt; ubuntu_14.tar`
+
+12. 导入容器快照为镜像：
+`root@test:~# cat ubuntu_14.tar | docker import - test/ubuntu_14:1.0`
+
+13. 删除容器：
+`root@test:~# docker rm 容器名称---------------------- -f参数为删除运行中的容器`
+
+14. 删除所有容器：`docker rm $(docker ps -a -q)`
+
+
+
+### 三、下载jetson-nano教程学习
+&amp;ensp;所有的项目在构建过程中，存储jetson-inference库将自动尝试为您下载模型。
+存储模型的主要站点在Box.com上。但是，来自中国的用户可能无法访问Box.com，因此，
+如果您的系统无法从其主要位置下载模型，则可以在下面的链接上获取要下载的模型。
+对于希望在运行时用于推理的每个模型，将下面找到的关联归档文件下载到您的&lt;jetson-inference&gt;/data/networks目录中，然后使用以下命令将其解压缩：</code></pre>
+<p>cd <jetson-inference>/data/networks/<br>tar -zxvf <model-archive-name>.tar.gz</model-archive-name></jetson-inference></p>
+<pre><code>事先，像往常一样克隆仓库。此发行页面并不用于存储代码的版本。
+
+
+</code></pre>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -482,7 +602,7 @@
             });
             document.body.appendChild(img);
           });
-      </script>
+      </script><link rel="stylesheet" href="/joaden/css/spoiler.css" type="text/css"><script src="/joaden/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -507,7 +627,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://joadenlee.gitee.io/joaden/joaden/2020/09/16/sencend/">https://joadenlee.gitee.io/joaden/joaden/2020/09/16/sencend/</a>
+                    <a href="https://joadenlee.gitee.io/joaden/joaden/2020/10/23/1-2-learn-nano/">https://joadenlee.gitee.io/joaden/joaden/2020/10/23/1-2-learn-nano/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -544,7 +664,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/joaden/tags/jetson-nano/">
+                                    <span class="chip bg-color">jetson-nano</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -714,33 +838,44 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/joaden/2020/09/17/maden-file/">
+                <a href="/joaden/2020/10/23/1-3-learn-nano/">
                     <div class="card-image">
                         
                         
-                        <img src="/joaden/medias/featureimages/18.jpg" class="responsive-img" alt="maden_file">
+                        <img src="/joaden/medias/featureimages/9.jpg" class="responsive-img" alt="第四章 pose人体检测容器的测试运行">
                         
-                        <span class="card-title">maden_file</span>
+                        <span class="card-title">第四章 pose人体检测容器的测试运行</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            “香雾云鬟湿，清辉玉臂寒。”这是描绘妻子的美丽，“香雾”、“云鬟”、“玉臂”，用了这样的词语来形容，这是真爱无疑了！“昼引老妻乘小艇，晴看稚子浴清江。”竟然和妻子划着小船，悠哉悠哉的看风景，而不管孩子们在河里玩，这太让人羡慕了。
-“老妻书数
+                            第四章 pose人体检测容器的试运行我第一个想做的是人体检测    目标检测和跟踪算法是用Python语言实现。使用视频监控截取的测试视频。为了提高计算机视觉、更快的计算速度和对深度网络的干扰，决定使用几个著名的库，如CUDA、OpenCV
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            joaden lee
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/joaden/categories/jetson-nano/" class="post-category">
+                                    jetson-nano
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/joaden/tags/jetson-nano/">
+                        <span class="chip bg-color">jetson-nano</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -752,35 +887,46 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/joaden/2020/09/16/mynew/">
+                <a href="/joaden/2020/10/23/1-1-learn-nano/">
                     <div class="card-image">
                         
                         
-                        <img src="/joaden/medias/featureimages/20.jpg" class="responsive-img" alt="mynew">
+                        <img src="/joaden/medias/featureimages/14.jpg" class="responsive-img" alt="第二章 NANO开发环境配置">
                         
-                        <span class="card-title">mynew</span>
+                        <span class="card-title">第二章 NANO开发环境配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            第二章 NANO板卡搭建开发环境    NVIDIA资料：  http://ngc.nvidia.com/
+一、NANO 更新系统源替换，加速更新，先拷贝一份，备份，删除所有的原有源，替换成下方的新源
+sudo cp /etc/apt/so
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            joaden lee
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/joaden/categories/jetson-nano/" class="post-category">
+                                    jetson-nano
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/joaden/tags/jetson-nano/">
+                        <span class="chip bg-color">jetson-nano</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -985,7 +1131,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.9k</span>&nbsp;字
+                class="white-color">6.1k</span>&nbsp;字
             
             
             
@@ -1123,6 +1269,6 @@ $(function () {
     <script src="/joaden/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/joaden/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+<script src="/joaden/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

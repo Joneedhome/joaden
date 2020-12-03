@@ -287,7 +287,7 @@ mark {
 /*更改导航栏颜色*/
 .bg-color {
     background-image: linear-gradient(to right, #4cbf30 20%, #cc99ff 80%); /*修改成自己喜欢的颜色值*/
-    opacity: 0.8;  /*透明效果 值范围 0~1，看情况自己修改*/
+    opacity: 0.4;  /*透明效果 值范围 0~1，看情况自己修改*/
 }
 
 
@@ -305,7 +305,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #4cbf30 10%, #0f9d58 90%);
     opacity: 0.8;
 }
 
@@ -598,8 +598,8 @@ header .go-back i {
 .post-cover {
     height: 40vh !important;
 }
-/*取消蒙版特效
-.bg-cover:after { 
+/*取消蒙版特效*/
+/*.bg-cover:after { 
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
 }*/

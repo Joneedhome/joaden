@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Joaden.lee</title>
   
-  <subtitle>This Is My Moving On,But Not Only.</subtitle>
+  <subtitle>Moving On,Not Only.</subtitle>
   <link href="https://joadenlee.gitee.io/joaden/atom.xml" rel="self"/>
   
   <link href="https://joadenlee.gitee.io/joaden/"/>
-  <updated>2020-09-17T08:19:11.928Z</updated>
+  <updated>2020-11-26T01:25:58.253Z</updated>
   <id>https://joadenlee.gitee.io/joaden/</id>
   
   <author>
@@ -17,33 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>maden_file</title>
-    <link href="https://joadenlee.gitee.io/joaden/2020/09/17/maden-file/"/>
-    <id>https://joadenlee.gitee.io/joaden/2020/09/17/maden-file/</id>
-    <published>2020-09-17T08:18:24.000Z</published>
-    <updated>2020-09-17T08:19:11.928Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;“香雾云鬟湿，清辉玉臂寒。”这是描绘妻子的美丽，“香雾”、“云鬟”、“玉臂”，用了这样的词语来形容，这是真爱无疑了！&lt;br&gt;“昼引老妻乘小艇，晴看稚子浴清江。”竟然和妻子划着小船，悠哉悠哉的看风景，而不管孩子们在河里玩，这太让人羡慕了。&lt;/p&gt;
-&lt;p&gt;“老妻书数纸，应悉未归</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>sencend</title>
-    <link href="https://joadenlee.gitee.io/joaden/2020/09/16/sencend/"/>
-    <id>https://joadenlee.gitee.io/joaden/2020/09/16/sencend/</id>
-    <published>2020-09-16T12:01:35.000Z</published>
-    <updated>2020-09-16T12:01:35.293Z</updated>
+    <title>JetBrains-Clion</title>
+    <link href="https://joadenlee.gitee.io/joaden/2020/11/26/jetbrains-clion/"/>
+    <id>https://joadenlee.gitee.io/joaden/2020/11/26/jetbrains-clion/</id>
+    <published>2020-11-26T01:25:58.000Z</published>
+    <updated>2020-11-26T01:25:58.253Z</updated>
     
     
       
@@ -64,43 +42,93 @@
   </entry>
   
   <entry>
-    <title>mynew</title>
-    <link href="https://joadenlee.gitee.io/joaden/2020/09/16/mynew/"/>
-    <id>https://joadenlee.gitee.io/joaden/2020/09/16/mynew/</id>
-    <published>2020-09-16T11:59:01.000Z</published>
-    <updated>2020-09-16T11:59:01.243Z</updated>
+    <title>第四章 pose人体检测容器的测试运行</title>
+    <link href="https://joadenlee.gitee.io/joaden/2020/10/23/1-3-learn-nano/"/>
+    <id>https://joadenlee.gitee.io/joaden/2020/10/23/1-3-learn-nano/</id>
+    <published>2020-10-23T09:47:26.000Z</published>
+    <updated>2020-10-23T09:52:33.319Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       </summary>
+    <summary type="html">&lt;h1 id=&quot;第四章-pose人体检测容器的试运行&quot;&gt;&lt;a href=&quot;#第四章-pose人体检测容器的试运行&quot; class=&quot;headerlink&quot; title=&quot;第四章 pose人体检测容器的试运行&quot;&gt;&lt;/a&gt;第四章 pose人体检测容器的试运行&lt;/h1&gt;&lt;h3</summary>
         
       
     
     
     
+    <category term="jetson-nano" scheme="https://joadenlee.gitee.io/joaden/categories/jetson-nano/"/>
+    
+    
+    <category term="jetson-nano" scheme="https://joadenlee.gitee.io/joaden/tags/jetson-nano/"/>
     
   </entry>
   
   <entry>
-    <title>初始英伟达开发板 jetson-nano</title>
+    <title>第三章 NANO板卡运行容器整理</title>
+    <link href="https://joadenlee.gitee.io/joaden/2020/10/23/1-2-learn-nano/"/>
+    <id>https://joadenlee.gitee.io/joaden/2020/10/23/1-2-learn-nano/</id>
+    <published>2020-10-23T09:47:19.000Z</published>
+    <updated>2020-10-23T09:49:26.293Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第三章-NANO板卡容器下载和运行&quot;&gt;&lt;a href=&quot;#第三章-NANO板卡容器下载和运行&quot; class=&quot;headerlink&quot; title=&quot;第三章 NANO板卡容器下载和运行&quot;&gt;&lt;/a&gt;第三章 NANO板卡容器下载和运行&lt;/h1&gt;&lt;p&gt;学习教程： &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="jetson-nano" scheme="https://joadenlee.gitee.io/joaden/categories/jetson-nano/"/>
+    
+    
+    <category term="jetson-nano" scheme="https://joadenlee.gitee.io/joaden/tags/jetson-nano/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第二章 NANO开发环境配置</title>
+    <link href="https://joadenlee.gitee.io/joaden/2020/10/23/1-1-learn-nano/"/>
+    <id>https://joadenlee.gitee.io/joaden/2020/10/23/1-1-learn-nano/</id>
+    <published>2020-10-23T09:45:34.000Z</published>
+    <updated>2020-10-23T09:46:54.547Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第二章-NANO板卡搭建开发环境&quot;&gt;&lt;a href=&quot;#第二章-NANO板卡搭建开发环境&quot; class=&quot;headerlink&quot; title=&quot;第二章 NANO板卡搭建开发环境&quot;&gt;&lt;/a&gt;第二章 NANO板卡搭建开发环境&lt;/h1&gt;&lt;p&gt;    NVIDIA资料：</summary>
+        
+      
+    
+    
+    
+    <category term="jetson-nano" scheme="https://joadenlee.gitee.io/joaden/categories/jetson-nano/"/>
+    
+    
+    <category term="jetson-nano" scheme="https://joadenlee.gitee.io/joaden/tags/jetson-nano/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一章 初始英伟达开发板 jetson-nano</title>
     <link href="https://joadenlee.gitee.io/joaden/2020/09/15/1-0-learn-nano/"/>
     <id>https://joadenlee.gitee.io/joaden/2020/09/15/1-0-learn-nano/</id>
     <published>2020-09-15T09:27:54.000Z</published>
-    <updated>2020-09-16T08:27:20.480Z</updated>
+    <updated>2020-10-23T10:00:14.486Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;第一章-初识NANO板卡&quot;&gt;&lt;a href=&quot;#第一章-初识NANO板卡&quot; class=&quot;headerlink&quot; title=&quot;第一章 初识NANO板卡&quot;&gt;&lt;/a&gt;第一章 初识NANO板卡&lt;/h1&gt;&lt;p&gt;    NVIDIA 最新推出的Jetson Nano</summary>
+    <summary type="html">&lt;h2 id=&quot;第一章-初识NANO板卡&quot;&gt;&lt;a href=&quot;#第一章-初识NANO板卡&quot; class=&quot;headerlink&quot; title=&quot;第一章 初识NANO板卡&quot;&gt;&lt;/a&gt;第一章 初识NANO板卡&lt;/h2&gt;&lt;p&gt;    NVIDIA 最新推出的Jetson Nano</summary>
         
       
     
